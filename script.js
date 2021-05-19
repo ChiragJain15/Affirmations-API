@@ -1,10 +1,4 @@
-let url = "https://www.affirmations.dev/";
-let request = new XMLHttpRequest();
-request.open("GET", url);
-request.responseType = "json";
-request.send();
-
-request.onload = () => {
-  const affirmation = request.response;
-  console.lof(affirmation);
-};
+const textbox = document.getElementById("main_heading");
+const affirmation =
+  affirmations[Math.floor(Math.random() * affirmations.length)];
+textbox.innerHTML = affirmation;
